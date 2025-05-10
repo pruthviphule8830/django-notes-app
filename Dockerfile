@@ -16,5 +16,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app/backend
 
 EXPOSE 8000
+
+RUN apt-get update && apt-get install -y git
+RUN git config --global --add safe.directory .
+
 #RUN python manage.py migrate
 #RUN python manage.py makemigrations
