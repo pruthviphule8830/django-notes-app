@@ -20,5 +20,7 @@ EXPOSE 8000
 RUN apt-get update && apt-get install -y git
 RUN git config --global --add safe.directory .
 
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+
 #RUN python manage.py migrate
 #RUN python manage.py makemigrations
